@@ -119,16 +119,9 @@
   <button onclick="iniciar()">Abrir</button>
 </div>
 
-<!-- Música do YouTube -->
-<div id="musica" style="display:none; text-align:center; margin-bottom:20px;">
-  <iframe width="300" height="170"
-    src=""
-    title="Só Tu És Santo - Morada"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen>
-  </iframe>
-</div>
+<audio id="musica" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+</audio>
 
 <div class="carta" id="carta">
   <h1>Para o melhor líder 🙏</h1>
@@ -155,12 +148,13 @@ function iniciar() {
   // animação da carta
   document.getElementById("carta").classList.add("ativa");
 
-  // tocar música (link real do YouTube)
+  // tocar música
   const musica = document.getElementById("musica");
-musica.style.display = "block";
+  musica.volume = 0.3;
 
-musica.querySelector("iframe").src =
-  "https://www.youtube.com/embed/9p0kGx0hF7k?autoplay=1";
+  musica.play().catch(() => {
+    alert("Se a música não tocar, clique novamente 🔊");
+  });
 }
 </script>
 
