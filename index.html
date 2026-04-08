@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <title>Carta para meu Líder</title>
 
-  <!-- Fonte manuscrita -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Cardo&display=swap" rel="stylesheet">
 
   <style>
     body {
@@ -16,51 +16,71 @@
       align-items: center;
       min-height: 100vh;
 
-      background: #bfa77a;
-      font-family: 'Georgia', serif;
+      background: linear-gradient(#8b6f47, #3e2f1c);
+      font-family: 'Cardo', serif;
     }
 
     .carta {
-      max-width: 650px;
-      padding: 50px;
+      max-width: 700px;
+      padding: 60px 50px;
 
       background: #fdf5e6;
 
-      /* textura leve */
+      /* textura de papel */
       background-image: radial-gradient(rgba(0,0,0,0.05) 1px, transparent 1px);
       background-size: 4px 4px;
 
-      border: 1px solid #d2b48c;
+      border-radius: 6px;
 
       box-shadow: 
-        0 10px 30px rgba(0,0,0,0.4),
-        inset 0 0 40px rgba(0,0,0,0.1);
-
-      border-radius: 4px;
+        0 20px 50px rgba(0,0,0,0.6),
+        inset 0 0 60px rgba(0,0,0,0.15);
 
       position: relative;
+
+      animation: aparecer 1.5s ease;
     }
 
-    /* manchas suaves */
+    /* bordas queimadas */
     .carta::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at top left, rgba(0,0,0,0.08), transparent 60%),
-                  radial-gradient(circle at bottom right, rgba(0,0,0,0.08), transparent 60%);
+      background: radial-gradient(circle, transparent 60%, rgba(0,0,0,0.25));
+      pointer-events: none;
+      border-radius: 6px;
+    }
+
+    /* cruz no fundo */
+    .carta::after {
+      content: "✝";
+      position: absolute;
+      font-size: 120px;
+      color: rgba(0,0,0,0.05);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       pointer-events: none;
     }
 
     h1 {
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 10px;
       font-family: 'Dancing Script', cursive;
-      font-size: 36px;
+      font-size: 42px;
       color: #2e1f0f;
     }
 
+    .versiculo {
+      text-align: center;
+      font-size: 14px;
+      font-style: italic;
+      margin-bottom: 25px;
+      color: #5a4630;
+    }
+
     p {
-      line-height: 1.8;
+      line-height: 1.9;
       margin-bottom: 18px;
       font-size: 18px;
       text-align: justify;
@@ -69,12 +89,25 @@
 
     .assinatura {
       display: block;
-      margin-top: 30px;
+      margin-top: 40px;
       text-align: right;
       font-family: 'Dancing Script', cursive;
-      font-size: 22px;
+      font-size: 24px;
       color: #2e1f0f;
     }
+
+    /* animação */
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
   </style>
 </head>
 
@@ -83,12 +116,16 @@
   <div class="carta">
     <h1>Para o melhor líder 🙏</h1>
 
+    <div class="versiculo">
+      "Combati o bom combate, terminei a corrida, guardei a fé." — 2 Timóteo 4:7
+    </div>
+
     <p>
-      Líder, queria começar dizendo o quanto sou grato a você. Mesmo sem termos tanta convivência no dia a dia ou conversas frequentes, o impacto que você teve na minha vida foi enorme. Desde que entrei na célula, você sempre foi alguém que me acolheu, me tratou bem e, principalmente, me ensinou muito. Através de você, muitas coisas começaram a fazer mais sentido pra mim, e isso fez toda a diferença na minha caminhada.
+      Líder, queria começar dizendo o quanto sou grato a você. Mesmo sem termos tanta convivência no dia a dia ou conversas frequentes, o impacto que você teve na minha vida foi enorme. Desde que entrei na célula, você sempre foi alguém que me acolheu, me tratou bem e, principalmente, me ensinou muito. Através de você, muitas coisas começaram a fazer mais sentido pra mim, e isso fez toda a diferença na minha caminhada com Deus.
     </p>
 
     <p>
-      Uma das coisas que mais admiro em você é a forma como você prega. Existe algo especial no seu jeito de transmitir as mensagens, é claro, é verdadeiro e chega de um jeito diferente. Muitas vezes, eu chegava na célula com dúvidas ou sem entender certas coisas, e saía com a mente mais aberta, com tudo fazendo mais sentido. Às vezes eu entrava pensando de um jeito e saía pensando completamente diferente, e isso marcou muito o meu crescimento. Você não apenas fala, você realmente ensina, e ensina de uma forma admirável.
+      Uma das coisas que mais admiro em você é a forma como você prega. Existe algo especial no seu jeito de transmitir as mensagens, é claro, é verdadeiro e chega de um jeito diferente. Muitas vezes, eu chegava na célula com dúvidas ou sem entender certas coisas, e saía com a mente mais aberta, com tudo fazendo mais sentido. Isso foi essencial no meu crescimento espiritual.
     </p>
 
     <p>
@@ -96,7 +133,7 @@
     </p>
 
     <p>
-      Também não posso deixar de dizer que fico triste com a sua saída da célula. Sua presença vai fazer muita falta. Mas, acima disso, fica uma gratidão enorme por tudo o que você fez e representou nesse tempo. Eu tenho certeza de que, assim como você marcou a minha vida, você vai marcar a vida de muitas outras pessoas nessa nova fase, mostrando o amor de Cristo da mesma forma que mostrou pra mim.
+      Também não posso deixar de dizer que fico triste com a sua saída da célula. Sua presença vai fazer muita falta. Mas, acima disso, fica uma gratidão enorme por tudo o que você fez e representou nesse tempo. Eu tenho certeza de que Deus ainda vai usar muito a sua vida para alcançar muitas outras pessoas.
     </p>
 
     <p>
@@ -104,7 +141,7 @@
     </p>
 
     <p>
-      Eu não tive muito tempo para poder deixar esse site melhor, mas saiba que foi com toda a gratidão por todos os ensinamentos que me passou, por todas as mensagens e orações.
+      Mesmo simples, fiz isso com todo carinho e gratidão por tudo o que você representa pra mim.
     </p>
 
     <p>
