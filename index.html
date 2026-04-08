@@ -120,10 +120,15 @@
 </div>
 
 <!-- Música do YouTube -->
-<iframe id="player"
-src=""
-allow="autoplay">
-</iframe>
+<div id="musica" style="display:none; text-align:center; margin-bottom:20px;">
+  <iframe width="300" height="170"
+    src=""
+    title="Só Tu És Santo - Morada"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+</div>
 
 <div class="carta" id="carta">
   <h1>Para o melhor líder 🙏</h1>
@@ -151,8 +156,11 @@ function iniciar() {
   document.getElementById("carta").classList.add("ativa");
 
   // tocar música (link real do YouTube)
-  document.getElementById("player").src =
-    "https://www.youtube.com/embed/9p0kGx0hF7k?autoplay=1&loop=1&playlist=9p0kGx0hF7k";
+  const musica = document.getElementById("musica");
+musica.style.display = "block";
+
+musica.querySelector("iframe").src =
+  "https://www.youtube.com/embed/9p0kGx0hF7k?autoplay=1";
 }
 </script>
 
