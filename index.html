@@ -14,32 +14,44 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      min-height: 100vh;
 
-      background: #cbb994;
+      background: #bfa77a;
       font-family: 'Georgia', serif;
     }
 
     .carta {
-  max-width: 650px;
-  padding: 60px 50px;
+      max-width: 650px;
+      padding: 50px;
 
-  background: url('https://i.imgur.com/6IUBK4F.png') no-repeat center;
-  background-size: cover;
+      /* COR BASE */
+      background: #fdf5e6;
 
-  border: none;
-  border-radius: 0;
+      /* EFEITO DE PAPEL ANTIGO */
+      background-image: radial-gradient(rgba(0,0,0,0.05) 1px, transparent 1px);
+      background-size: 4px 4px;
 
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      /* BORDA MAIS NATURAL */
+      border: 1px solid #d2b48c;
 
-  position: relative;
-}
+      /* SOMBRA REALISTA */
+      box-shadow: 
+        0 10px 30px rgba(0,0,0,0.4),
+        inset 0 0 40px rgba(0,0,0,0.1);
 
+      /* FORMATO MAIS DE "FOLHA" */
+      border-radius: 4px;
+
+      position: relative;
+    }
+
+    /* MANCHAS SUAVES (efeito envelhecido) */
     .carta::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: url('https://www.transparenttextures.com/patterns/aged-paper.png');
-      opacity: 0.4;
+      background: radial-gradient(circle at top left, rgba(0,0,0,0.08), transparent 60%),
+                  radial-gradient(circle at bottom right, rgba(0,0,0,0.08), transparent 60%);
       pointer-events: none;
     }
 
@@ -47,7 +59,8 @@
       text-align: center;
       margin-bottom: 25px;
       font-family: 'Dancing Script', cursive;
-      font-size: 34px;
+      font-size: 36px;
+      color: #2e1f0f;
     }
 
     p {
@@ -55,6 +68,7 @@
       margin-bottom: 18px;
       font-size: 18px;
       text-align: justify;
+      color: #3b2f1b;
     }
 
     .assinatura {
@@ -63,6 +77,7 @@
       text-align: right;
       font-family: 'Dancing Script', cursive;
       font-size: 22px;
+      color: #2e1f0f;
     }
   </style>
 </head>
@@ -73,27 +88,23 @@
     <h1>Para o melhor líder 🙏</h1>
 
     <p>
-      Líder, queria começar dizendo o quanto sou grato a você. Mesmo sem termos tanta convivência no dia a dia ou conversas frequentes, o impacto que você teve na minha vida foi enorme. Desde que entrei na célula, você sempre foi alguém que me acolheu, me tratou bem e, principalmente, me ensinou muito. Através de você, muitas coisas começaram a fazer mais sentido pra mim, e isso fez toda a diferença na minha caminhada.
+      Líder, queria começar dizendo o quanto sou grato a você...
     </p>
 
     <p>
-      Uma das coisas que mais admiro em você é a forma como você prega. Existe algo especial no seu jeito de transmitir as mensagens, é claro, é verdadeiro e chega de um jeito diferente. Muitas vezes, eu chegava na célula com dúvidas ou sem entender certas coisas, e saía com a mente mais aberta, com tudo fazendo mais sentido. Às vezes eu entrava pensando de um jeito e saía pensando completamente diferente, e isso marcou muito o meu crescimento. Você não apenas fala, você realmente ensina, e ensina de uma forma admirável.
+      Uma das coisas que mais admiro em você é a forma como você prega...
     </p>
 
     <p>
-      Quero te agradecer por tudo: por cada ensinamento, por cada palavra, por cada oração e por todo o esforço que você colocou para ser esse líder que você é. Dá pra ver que é algo feito com amor, responsabilidade e propósito, e isso impacta mais do que você imagina.
+      Quero te agradecer por tudo: por cada ensinamento...
     </p>
 
     <p>
-      Também não posso deixar de dizer que fico triste com a sua saída da célula. Sua presença vai fazer muita falta. Mas, acima disso, fica uma gratidão enorme por tudo o que você fez e representou nesse tempo. Eu tenho certeza de que, assim como você marcou a minha vida, você vai marcar a vida de muitas outras pessoas nessa nova fase, mostrando o amor de Cristo da mesma forma que mostrou pra mim.
+      Também não posso deixar de dizer que fico triste com a sua saída...
     </p>
 
     <p>
-      Eu te admiro muito, de verdade, e levo comigo tudo o que aprendi com você.
-    </p>
-
-    <p>
-      Eu não tive muito tempo para poder deixar esse site melhor, mas saiba que foi com toda a gratidão por todos os ensinamentos que me passou, por todas as mensagens e orações.
+      Eu te admiro muito, de verdade...
     </p>
 
     <p>
