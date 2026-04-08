@@ -36,7 +36,7 @@
     }
 
     .carta.ativa {
-      animation: abrir 1.2s ease forwards;
+      animation: abrir 1.5s ease forwards;
     }
 
     @keyframes abrir {
@@ -97,12 +97,17 @@
 
     button {
       margin-top: 20px;
-      padding: 10px 20px;
+      padding: 12px 25px;
       font-size: 18px;
       cursor: pointer;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
       background: #fff;
+    }
+
+    /* vídeo invisível */
+    iframe {
+      display: none;
     }
   </style>
 </head>
@@ -114,10 +119,11 @@
   <button onclick="iniciar()">Abrir</button>
 </div>
 
-<audio id="musica" loop>
-  <!-- TROQUE ESSE LINK SE QUISER OUTRA MUSICA -->
-  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-</audio>
+<!-- Música do YouTube -->
+<iframe id="player"
+src=""
+allow="autoplay">
+</iframe>
 
 <div class="carta" id="carta">
   <h1>Para o melhor líder 🙏</h1>
@@ -141,12 +147,12 @@
 function iniciar() {
   document.getElementById("tela").style.display = "none";
 
-  const carta = document.getElementById("carta");
-  carta.classList.add("ativa");
+  // animação da carta
+  document.getElementById("carta").classList.add("ativa");
 
-  const musica = document.getElementById("musica");
-  musica.volume = 0.3;
-  musica.play();
+  // tocar música (link real do YouTube)
+  document.getElementById("player").src =
+    "https://www.youtube.com/embed/9p0kGx0hF7k?autoplay=1&loop=1&playlist=9p0kGx0hF7k";
 }
 </script>
 
