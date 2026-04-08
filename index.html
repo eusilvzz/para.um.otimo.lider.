@@ -18,6 +18,7 @@
 
       background: linear-gradient(#8b6f47, #3e2f1c);
       font-family: 'Cardo', serif;
+      cursor: pointer;
     }
 
     .carta {
@@ -40,15 +41,17 @@
       animation: aparecer 1.5s ease;
     }
 
+    /* borda queimadinha */
     .carta::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle, transparent 60%, rgba(0,0,0,0.25));
+      background: radial-gradient(circle, transparent 60%, rgba(0,0,0,0.3));
       pointer-events: none;
       border-radius: 6px;
     }
 
+    /* cruz no fundo */
     .carta::after {
       content: "✝";
       position: absolute;
@@ -95,10 +98,33 @@
       }
     }
 
+    /* mensagem de clique */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 20px;
+      z-index: 10;
+      font-family: 'Dancing Script', cursive;
+    }
   </style>
 </head>
 
-<body>
+<body onclick="tocarMusica()">
+
+  <div class="overlay" id="overlay">
+    Clique em qualquer lugar para abrir a carta ✉️
+  </div>
+
+  <!-- Música -->
+  <audio id="musica" loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_115b9b0c5e.mp3?filename=soft-piano-ambient-110397.mp3" type="audio/mpeg">
+  </audio>
 
   <div class="carta">
     <h1>Para o melhor líder 🙏</h1>
@@ -128,6 +154,16 @@
     </p>
 
   </div>
+
+  <script>
+    function tocarMusica() {
+      const musica = document.getElementById("musica");
+      musica.volume = 0.3;
+      musica.play();
+
+      document.getElementById("overlay").style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
