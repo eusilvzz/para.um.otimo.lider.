@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Carta para meu Líder</title>
 
-  <!-- Fonte manuscrita -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
   <style>
@@ -16,7 +15,7 @@
       align-items: center;
       min-height: 100vh;
 
-      background: #bfa77a;
+      background: linear-gradient(#bfa77a, #a89060);
       font-family: 'Georgia', serif;
     }
 
@@ -26,7 +25,6 @@
 
       background: #fdf5e6;
 
-      /* textura leve */
       background-image: radial-gradient(rgba(0,0,0,0.05) 1px, transparent 1px);
       background-size: 4px 4px;
 
@@ -36,19 +34,21 @@
         0 10px 30px rgba(0,0,0,0.4),
         inset 0 0 40px rgba(0,0,0,0.1);
 
-      border-radius: 4px;
-
       position: relative;
+      border-radius: 4px;
     }
 
-    /* manchas suaves */
-    .carta::before {
+    /* LUZ DIVINA */
+    .carta::after {
       content: "";
       position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top left, rgba(0,0,0,0.08), transparent 60%),
-                  radial-gradient(circle at bottom right, rgba(0,0,0,0.08), transparent 60%);
-      pointer-events: none;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 60px;
+      background: radial-gradient(rgba(255,255,200,0.6), transparent);
+      filter: blur(20px);
     }
 
     h1 {
@@ -67,6 +67,13 @@
       color: #3b2f1b;
     }
 
+    .versiculo {
+      margin-top: 30px;
+      font-style: italic;
+      text-align: center;
+      color: #5a4325;
+    }
+
     .assinatura {
       display: block;
       margin-top: 30px;
@@ -75,41 +82,52 @@
       font-size: 22px;
       color: #2e1f0f;
     }
+
+    .cruz {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 22px;
+      opacity: 0.2;
+    }
   </style>
 </head>
 
 <body>
 
   <div class="carta">
+    <div class="cruz">✝️</div>
+
     <h1>Para o melhor líder 🙏</h1>
 
     <p>
-      Líder, queria começar dizendo o quanto sou grato a você. Mesmo sem termos tanta convivência no dia a dia ou conversas frequentes, o impacto que você teve na minha vida foi enorme. Desde que entrei na célula, você sempre foi alguém que me acolheu, me tratou bem e, principalmente, me ensinou muito. Através de você, muitas coisas começaram a fazer mais sentido pra mim, e isso fez toda a diferença na minha caminhada.
+      Líder, queria começar dizendo o quanto sou grato a você...
     </p>
 
     <p>
-      Uma das coisas que mais admiro em você é a forma como você prega. Existe algo especial no seu jeito de transmitir as mensagens, é claro, é verdadeiro e chega de um jeito diferente. Muitas vezes, eu chegava na célula com dúvidas ou sem entender certas coisas, e saía com a mente mais aberta, com tudo fazendo mais sentido. Às vezes eu entrava pensando de um jeito e saía pensando completamente diferente, e isso marcou muito o meu crescimento. Você não apenas fala, você realmente ensina, e ensina de uma forma admirável.
+      Uma das coisas que mais admiro em você é a forma como você prega...
     </p>
 
     <p>
-      Quero te agradecer por tudo: por cada ensinamento, por cada palavra, por cada oração e por todo o esforço que você colocou para ser esse líder que você é. Dá pra ver que é algo feito com amor, responsabilidade e propósito, e isso impacta mais do que você imagina.
+      Quero te agradecer por tudo...
     </p>
 
     <p>
-      Também não posso deixar de dizer que fico triste com a sua saída da célula. Sua presença vai fazer muita falta. Mas, acima disso, fica uma gratidão enorme por tudo o que você fez e representou nesse tempo. Eu tenho certeza de que, assim como você marcou a minha vida, você vai marcar a vida de muitas outras pessoas nessa nova fase, mostrando o amor de Cristo da mesma forma que mostrou pra mim.
+      Também não posso deixar de dizer...
     </p>
 
     <p>
-      Eu te admiro muito, de verdade, e levo comigo tudo o que aprendi com você.
-    </p>
-
-    <p>
-      Eu não tive muito tempo para poder deixar esse site melhor, mas saiba que foi com toda a gratidão por todos os ensinamentos que me passou, por todas as mensagens e orações.
+      Eu te admiro muito, de verdade...
     </p>
 
     <p>
       Muito obrigado, líder!
     </p>
+
+    <div class="versiculo">
+      “Combati o bom combate, terminei a corrida, guardei a fé.”<br>
+      — 2 Timóteo 4:7
+    </div>
 
     <span class="assinatura">
       Com carinho,<br>
